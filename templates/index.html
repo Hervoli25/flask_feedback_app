@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="../static/style.css" />
+		<title>Please rate your service</title>
+	</head>
+	<body>
+		<div class="container">
+			<img src="../static/logo.png" alt="" class="logo" />
+			{% if message %}
+
+			<p class="message">{{ message | safe }}</p>
+			{% endif %}
+
+			<form action="/submit" method="POST">
+				<div class="form-group">
+					<h3>Customer Name</h3>
+					<input type="text" name="customer" placeholder="Customer Name" />
+				</div>
+				<div class="form-group">
+					<h3>Dealer</h3>
+					<select name="dealer">
+						<option value="">Select Dealer</option>
+						<option value="John Peter">John Peter</option>
+						<option value="Herve Tshombe">Herve Tshombe</option>
+						<option value="Moses Mwale">Moses Mwale</option>
+						<option value="Joshua Mills">Joshua Mills</option>
+						<option value="Jeremy Green">Jeremy Green</option>
+						<option value="Cindy Smith">Cindy Smith</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<h3>Please Rate Your Dealer</h3>
+					<div class="radio-group">
+						<div>
+							<input type="radio" name="rating" value="1" /><label>1</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="2" /><label>2</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="3" /><label>3</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="4" /><label>4</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="5" /><label>5</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="6" /><label>6</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="7" /><label>7</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="8" /><label>8</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="9" /><label>9</label>
+						</div>
+						<div>
+							<input type="radio" name="rating" value="10" checked /><label
+								>10</label
+							>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<h3>Comments</h3>
+					<textarea
+						name="comments"
+						cols="30"
+						rows="10"
+						placeholder="Tell us what you liked or didn't like about your experience"
+					></textarea>
+				</div>
+				<input type="submit" value="Submit" class="btn" />
+			</form>
+		</div>
+		<footer>
+			<p>
+				Copyright &copy; <span id="currentYear"></span> Hervoli Motor-Store. All
+				rights reserved.
+			</p>
+		</footer>
+
+		<script>
+			document.getElementById('currentYear').innerHTML =
+				new Date().getFullYear();
+		</script>
+	</body>
+</html>

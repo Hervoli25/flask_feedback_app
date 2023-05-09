@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="../static/style.css" />
+		<title>Thank You!</title>
+	</head>
+	<body>
+		<div class="container">
+			<img src="../static/logo.png" alt="" class="logo" />
+			<h1>Thank You For Your Feedback!</h1>
+			<p>
+				We appreciate your feedback. We will use it to improve our customer
+				service.
+			</p>
+		</div>
+
+		<footer>
+			<p>
+				Copyright &copy; <span id="currentYear"></span> Hervoli Motor-Store. All
+				rights reserved.
+			</p>
+		</footer>
+
+		<script>
+			document.getElementById('currentYear').innerHTML =
+				new Date().getFullYear();
+		</script>
+	</body>
+</html>
